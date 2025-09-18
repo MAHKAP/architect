@@ -1,1 +1,0 @@
-// This file exports any custom TypeScript types or interfaces used throughout the application, such as props for components.
