@@ -132,8 +132,14 @@ const About = () => {
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
+                whileHover={{ y: -10, scale: 1.02 }}
                 transition={{ duration: 0.5, delay: index * 0.2 }}
-                sx={{ flex: 1 }}
+                sx={{
+                borderRadius: 3,
+                overflow: "hidden",
+                boxShadow: 4,
+                flex: 1,
+              }}
               >
                 <Card sx={{ height: '100%', textAlign: 'center', p: 3 }}>
                   <Box sx={{ color: 'primary.main', mb: 2 }}>{value.icon}</Box>

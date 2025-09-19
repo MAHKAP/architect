@@ -91,28 +91,48 @@ const Services = () => {
               key={index}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
+              whileHover={{ y: -10, scale: 1.02 }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
+              sx={{
+                borderRadius: 3,
+                overflow: "hidden",
+                boxShadow: 4,
+                display: "flex",
+              }}
             >
-              <Card sx={{ display: { xs: 'block', md: 'flex' } }}>
+              <Card
+                sx={{
+                  display: { xs: "block", md: "flex" },
+                  height: "100%", // ensure card itself stretches
+                }}
+              >
                 <CardMedia
                   component="img"
                   image={service.image}
                   alt={service.title}
                   sx={{
-                    width: { xs: '100%', md: '40%' },
-                    height: { xs: 240, md: 'auto' },
+                    width: { xs: "100%", md: "40%" },
+                    objectFit: "cover",   // keeps aspect ratio, crops if needed
+                    height: "100%",       // take full height of sibling content
                   }}
                 />
-                <CardContent sx={{ flex: 1 }}>
+                <CardContent
+                  sx={{
+                    flex: 1,
+                    display: "flex",
+                    flexDirection: "column",
+                    //justifyContent: "center", // vertically align content
+                  }}
+                >
                   <Typography variant="h4" component="h2" gutterBottom>
                     {service.title}
                   </Typography>
-                  <Typography variant="body1" paragraph>
+                  <Typography variant="body1" sx={{ mb: 2 }}>
                     {service.description}
                   </Typography>
                   <List>
                     {service.features.map((feature, featureIndex) => (
-                      <ListItem key={featureIndex}>
+                      <ListItem key={featureIndex} sx={{ py: 0 }}>
                         <ListItemIcon>
                           <CheckCircleIcon color="primary" />
                         </ListItemIcon>

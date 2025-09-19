@@ -3,22 +3,18 @@ import {
   Box,
   Container,
   Typography,
-  Grid,
   Card,
   CardContent,
   CardMedia,
   Chip,
-  Button,
   Dialog,
   DialogContent,
-  DialogTitle,
   IconButton,
 } from '@mui/material';
 import { motion } from 'framer-motion';
 import CloseIcon from '@mui/icons-material/Close';
 
-
-const MotionBox = motion(Box);
+const MotionCard = motion(Card);
 
 const projects = [
   {
@@ -81,9 +77,7 @@ const categories = ['All', 'Commercial', 'Residential', 'Infrastructure'];
 
 const Projects = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
-  const [selectedProject, setSelectedProject] = useState<typeof projects[0] | null>(
-    null
-  );
+  const [selectedProject, setSelectedProject] = useState<typeof projects[0] | null>(null);
 
   const filteredProjects =
     selectedCategory === 'All'
@@ -104,66 +98,88 @@ const Projects = () => {
           <Typography variant="h2" component="h1" gutterBottom>
             Our Projects
           </Typography>
-          <Typography variant="h5">
+          <Typography variant="h5" sx={{ opacity: 0.85 }}>
             Showcasing our excellence in construction
           </Typography>
         </Container>
       </Box>
 
       {/* Category Filter */}
-      <Container maxWidth="lg" sx={{ py: 4 }}>
-        <Box sx={{ display: 'flex', justifyContent: 'center', gap: 2, mb: 4 }}>
+      <Container maxWidth="lg" sx={{ py: 6 }}>
+        <Box sx={{ display: 'flex', justifyContent: 'center', gap: 2, flexWrap: 'wrap', mb: 6 }}>
           {categories.map((category) => (
             <Chip
               key={category}
               label={category}
               onClick={() => setSelectedCategory(category)}
               color={selectedCategory === category ? 'primary' : 'default'}
-              sx={{ cursor: 'pointer' }}
+              sx={{
+                cursor: 'pointer',
+                px: 2,
+                py: 1,
+                fontWeight: 'bold',
+                '&:hover': { bgcolor: 'primary.light', color: 'white' },
+              }}
             />
           ))}
         </Box>
 
-        {/* Projects Grid */}
-        <Box sx={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
+        {/* Projects Cards – using flex instead of Grid */}
+        <Box
+          sx={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            gap: 3,
+            justifyContent: 'center',
+          }}
+        >
           {filteredProjects.map((project, index) => (
-              <MotionBox
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-              >
-                <Card
-                  sx={{ display: { xs: 'block', md: 'flex' } }}
-                  onClick={() => setSelectedProject(project)}
-                >
-                  <CardMedia
-                    component="img"
-                    image={project.image}
-                    alt={project.title}
-                    sx={{
-                    width: { xs: '100%', md: '40%' },
-                    height: { xs: 240, md: 'auto' },
+            <MotionCard
+              key={index}
+              whileHover={{ scale: 1.03 }}
+              transition={{ duration: 0.3 }}
+              sx={{
+                borderRadius: 3,
+                overflow: 'hidden',
+                cursor: 'pointer',
+                boxShadow: 3,
+                '&:hover': { boxShadow: 6 },
+                width: { xs: '100%', sm: 'calc(50% - 12px)', md: 'calc(33.333% - 16px)' },
+                display: 'flex',
+                flexDirection: 'column',
+              }}
+              onClick={() => setSelectedProject(project)}
+            >
+              <Box sx={{ position: 'relative' }}>
+                <CardMedia
+                  component="img"
+                  image={project.image}
+                  alt={project.title}
+                  sx={{ height: 220, objectFit: 'cover' }}
+                />
+                <Chip
+                  label={project.category}
+                  color="primary"
+                  size="small"
+                  sx={{
+                    position: 'absolute',
+                    top: 16,
+                    left: 16,
+                    bgcolor: 'rgba(0,0,0,0.6)',
+                    color: 'white',
                   }}
-                  />
-                  <CardContent sx={{ flex: 1 }}>
-                    <Typography variant="h5" component="h2" gutterBottom>
-                      {project.title}
-                    </Typography>
-                    <Chip
-                      label={project.category}
-                      color="primary"
-                      size="small"
-                      sx={{ mb: 2 }}
-                    />
-                    <Typography variant="body1" color="text.secondary">
-                      {project.description}
-                    </Typography>
-                  </CardContent>
-                </Card>
-              </MotionBox>
-           ))}
- 
+                />
+              </Box>
+              <CardContent sx={{ flexGrow: 1 }}>
+                <Typography variant="h6" component="h2" gutterBottom>
+                  {project.title}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  {project.description}
+                </Typography>
+              </CardContent>
+            </MotionCard>
+          ))}
         </Box>
       </Container>
 
@@ -173,29 +189,19 @@ const Projects = () => {
         onClose={() => setSelectedProject(null)}
         maxWidth="md"
         fullWidth
+        PaperProps={{ sx: { borderRadius: 3, p: 2 } }}
       >
         {selectedProject && (
           <>
-            <DialogTitle>
-              <Box
-                sx={{
-                  display: 'flex',
-                  justifyContent: 'space-between',
-                  alignItems: 'center',
-                }}
-              >
+            <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 2 }}>
+              <Typography variant="h5" fontWeight="bold">
                 {selectedProject.title}
-                <IconButton
-                  edge="end"
-                  color="inherit"
-                  onClick={() => setSelectedProject(null)}
-                  aria-label="close"
-                >
-                  <CloseIcon />
-                </IconButton>
-              </Box>
-            </DialogTitle>
-            <DialogContent>
+              </Typography>
+              <IconButton onClick={() => setSelectedProject(null)}>
+                <CloseIcon />
+              </IconButton>
+            </Box>
+            <DialogContent dividers>
               <Box
                 component="img"
                 src={selectedProject.image}
@@ -203,18 +209,15 @@ const Projects = () => {
                 sx={{
                   width: '100%',
                   height: 'auto',
-                  borderRadius: 1,
-                  mb: 2,
+                  borderRadius: 2,
+                  mb: 3,
+                  boxShadow: 2,
                 }}
               />
               <Typography variant="body1" paragraph>
                 {selectedProject.details}
               </Typography>
-              <Chip
-                label={selectedProject.category}
-                color="primary"
-                sx={{ mr: 1 }}
-              />
+              <Chip label={selectedProject.category} color="primary" sx={{ fontWeight: 'bold' }} />
             </DialogContent>
           </>
         )}
@@ -223,4 +226,4 @@ const Projects = () => {
   );
 };
 
-export default Projects; 
+export default Projects;
