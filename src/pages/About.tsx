@@ -15,28 +15,28 @@ import HandshakeIcon from '@mui/icons-material/Handshake';
 const MotionBox = motion(Box);
 
 const team = [
-  { name: 'M. K. Naik', position: 'CEO & Founder', image: '/team/leader1.jpg' },
-  { name: 'N. D. Godbole', position: 'CEO & Founder', image: '/team/leader2.jpg' },
-  { name: 'Prashant Jawale', position: 'Project Manager', image: '/team/leader3.jpg' },
+  { name: 'M. K. Naik', position: 'CEO & Founder', image: '/architect/team/leader1.jpg' },
+  { name: 'N. D. Godbole', position: 'CEO & Founder', image: '/architect/team/leader2.jpg' },
+  { name: 'Prashant Jawale', position: 'Project Manager', image: '/architect/team/leader3.jpg' },
 ];
 
 const values = [
   {
-    title: 'Excellence',
+    title: 'Innovation & Creativity',
     description:
-      'We strive for excellence in every project. Continuous improvement and commitment to exceeding expectations.',
+      'Adopting modern RCC techniques, eco-friendly materials, and sustainable designs. Balancing creativity in architecture with the practicality of structural safety.',
     icon: <EmojiEventsIcon sx={{ fontSize: 40 }} />,
   },
   {
-    title: 'Safety',
+    title: 'Safety & Reliability',
     description:
-      'Safety is our top priority on every construction site. We ensure a safe environment for employees, customers, and the public.',
+      'Designing with compliance to IS codes, safety norms, and seismic considerations. Ensuring long-lasting and resilient structures.',
     icon: <SecurityIcon sx={{ fontSize: 40 }} />,
   },
   {
-    title: 'Integrity',
+    title: 'Integrity & Transparency',
     description:
-      'We conduct our business with honesty and transparency, building trust through strong moral principles.',
+      'Honest consultation with clients about feasibility, costs, and timelines. Clear communication and ethical practices in every project.',
     icon: <HandshakeIcon sx={{ fontSize: 40 }} />,
   },
 ];
@@ -100,7 +100,7 @@ const About = () => {
           >
             <Box
               component="img"
-              src="/About.jpeg"
+              src="/architect/About.jpeg"
               alt="Company building"
               sx={{
                 width: '100%',

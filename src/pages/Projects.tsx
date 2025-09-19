@@ -26,7 +26,7 @@ const projects = [
     category: 'Commercial',
     description:
       'A state-of-the-art office complex featuring sustainable design and smart building technology.',
-    image: '/projects/project1.jpg',
+    image: '/architect/projects/project1.jpg',
     details:
       'This 50,000 sq ft office complex was completed in 2022. The project features LEED Platinum certification, solar panels, and advanced building automation systems.',
   },
@@ -35,7 +35,7 @@ const projects = [
     category: 'Residential',
     description:
       'A 30-story luxury residential tower with panoramic views and premium amenities.',
-    image: '/projects/project2.jpg',
+    image: '/architect/projects/project2.jpg',
     details:
       'Completed in 2021, this residential tower offers 200 luxury units, a rooftop garden, fitness center, and 24/7 concierge service.',
   },
@@ -44,7 +44,7 @@ const projects = [
     category: 'Infrastructure',
     description:
       'A major highway extension project improving regional connectivity.',
-    image: '/projects/project3.jpg',
+    image: '/architect/projects/project3.jpg',
     details:
       'This 10-mile highway extension project included the construction of three bridges and two interchanges, completed in 2023.',
   },
@@ -53,7 +53,7 @@ const projects = [
     category: 'Commercial',
     description:
       'Complete renovation of a 20-year-old shopping mall with modern amenities.',
-    image: '/projects/project6.jpg',
+    image: '/architect/projects/project6.jpg',
     details:
       'The renovation project included structural upgrades, modern facade, and interior redesign, completed in 2022.',
   },
@@ -62,7 +62,7 @@ const projects = [
     category: 'Residential',
     description:
       'A sustainable smart home community with integrated technology.',
-    image: '/projects/smarthome.jpg',
+    image: '/architect/projects/smarthome.jpg',
     details:
       'This 100-unit smart home community features solar power, smart home automation, and sustainable building materials.',
   },
@@ -71,7 +71,7 @@ const projects = [
     category: 'Infrastructure',
     description:
       'State-of-the-art water treatment facility serving 500,000 residents.',
-    image: '/projects/project4.jpg',
+    image: '/architect/projects/project4.jpg',
     details:
       'The water treatment plant project included advanced filtration systems and automated monitoring technology.',
   },

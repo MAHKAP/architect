@@ -15,7 +15,7 @@ import ScrollToTop from './components/ScrollToTop';
 
 const App: React.FC = () => {
   return (
-    <Router>
+    <Router basename="/architect">
       <div className="flex flex-col min-h-screen">
         <main className="flex-grow">
           <Navbar />

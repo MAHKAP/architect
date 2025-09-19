@@ -17,7 +17,7 @@ const blogPosts: BlogPost[] = [
     title: "Importance of RCC in Modern Architecture",
     date: "Feb 5, 2025",
     author: "Admin",
-    image: "/blog/rcc1.jpg",
+    image: "/architect/blog/rcc1.jpg",
     excerpt:
       "RCC (Reinforced Cement Concrete) plays a vital role in creating durable, long-lasting structures. Learn why it's the backbone of construction.",
     content:
@@ -28,7 +28,7 @@ const blogPosts: BlogPost[] = [
     title: "Top 5 Mistakes to Avoid in Structural Design",
     date: "Jan 20, 2025",
     author: "Admin",
-    image: "/blog/rcc2.jpg",
+    image: "/architect/blog/rcc2.jpg",
     excerpt:
       "Designing structures requires precision. Here are the top 5 mistakes architects and consultants should avoid when working with RCC.",
     content: "Full blog content here..."
@@ -38,7 +38,7 @@ const blogPosts: BlogPost[] = [
     title: "Future of Sustainable RCC Construction",
     date: "Dec 10, 2024",
     author: "Admin",
-    image: "/blog/rcc3.jpg",
+    image: "/architect/blog/rcc3.jpg",
     excerpt:
       "Sustainability is key in construction today. Discover how RCC structures are evolving to meet eco-friendly standards.",
     content: "Full blog content here..."

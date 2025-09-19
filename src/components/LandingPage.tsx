@@ -27,11 +27,11 @@ const testimonials = [
 ];
 
 const projects = [
-  { image: "/projects/project1.jpg", title: "Luxury Villa" },
-  { image: "/projects/project2.jpg", title: "Shopping Complex" },
-  { image: "/projects/project3.jpg", title: "Corporate Office" },
-  { image: "/projects/project4.jpg", title: "Highway Construction" },
-  { image: "/projects/project5.jpg", title: "Apartment Tower" },
+  { image: "/architect/projects/project1.jpg", title: "Luxury Villa" },
+  { image: "/architect/projects/project2.jpg", title: "Shopping Complex" },
+  { image: "/architect/projects/project3.jpg", title: "Corporate Office" },
+  { image: "/architect/projects/project4.jpg", title: "Highway Construction" },
+  { image: "/architect/projects/project5.jpg", title: "Apartment Tower" },
 ];
 
 const LandingPage: React.FC = () => {
@@ -53,7 +53,7 @@ const LandingPage: React.FC = () => {
     playsInline
     className="absolute inset-0 w-full h-full object-cover"
   >
-    <source src="/Hero2.mp4" type="video/mp4" />
+    <source src="/architect/Hero2.mp4" type="video/mp4" />
     Your browser does not support the video tag.
   </video>
 
@@ -85,7 +85,7 @@ const LandingPage: React.FC = () => {
       <section id="about" className="py-16 bg-gray-50">
         <div className="container mx-auto px-6 md:flex items-center gap-10">
           <img
-            src="/About.jpeg"
+            src="/architect/About.jpeg"
             alt="About Us"
             className="rounded-lg shadow-md md:w-1/2"
           />

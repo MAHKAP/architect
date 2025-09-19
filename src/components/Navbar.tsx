@@ -73,8 +73,8 @@ const Navbar = () => {
           >
             <Box
               component="img"
-              src="/companylogo.jpeg"
-              alt="RCC Consultants Logo"
+              src="/architect/companylogo.jpeg"
+              alt="Company Logo"
               sx={{
                 height: 40,
                 marginRight: 2,

@@ -23,7 +23,7 @@ const services = [
     title: 'Structural Design',
     description:
       'Developing structural and aesthetic designs, ensuring regulatory compliance and permits, selecting appropriate materials, and collaborating to create detailed construction documents and schedules.',
-    image: '/services/commercial.jpg',
+    image: '/architect/services/commercial.jpg',
     features: [
       'Conceptual Structural Design',
       'Structural Analysis & Load Calculations',
@@ -39,7 +39,7 @@ const services = [
     title: 'Architectural Planning',
     description:
       'Architectural planning involves the design process phases, including pre-design, schematic design, design development, construction documents, bidding, and construction administration, alongside key planning elements like site analysis, program definition, budget, schedule, and client goals.',
-    image: '/services/residential.jpg',
+    image: '/architect/services/residential.jpg',
     features: [
       'Define project scope and objectives',
       'Understand client needs and preferences',
@@ -52,7 +52,7 @@ const services = [
     title: 'Project Supervision',
     description:
       'Supervise construction work to confirm adherence to the approved designs and specifications',
-    image: '/services/ProjectSupervision.jpg',
+    image: '/architect/services/ProjectSupervision.jpg',
     features: [
       'Coordinate with all stakeholders',
       'Oversee the construction schedule',

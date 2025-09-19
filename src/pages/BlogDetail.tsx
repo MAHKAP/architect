@@ -7,16 +7,16 @@ const blogPosts = [
     title: "Importance of RCC in Modern Architecture",
     date: "Feb 5, 2025",
     author: "Admin",
-    image: "/blog/rcc1.jpg",
+    image: "/architect/blog/rcc1.jpg",
     content:
-      "RCC (Reinforced Cement Concrete) plays a vital role in creating durable, long-lasting structures. Detailed blog content goes here..."
+      "RCC (Reinforced Cement Concrete) plays a vital role in creating durable, long-lasting structures. Reinforced Cement Concrete (RCC) has emerged as the backbone of modern architecture, transforming the way we design and construct buildings and infrastructure. By combining the compressive strength of concrete with the tensile strength of steel reinforcement, RCC offers unmatched durability, flexibility, and safety in construction. RCC is not just a construction material—it is the **foundation of modern architecture**. Its combination of strength, durability, versatility, and cost-effectiveness makes it an essential choice for today’s architects and engineers. As urban landscapes evolve, RCC continues to play a pivotal role in shaping safe, sustainable, and innovative structures worldwide."
   },
   {
     id: 2,
     title: "Top 5 Mistakes to Avoid in Structural Design",
     date: "Jan 20, 2025",
     author: "Admin",
-    image: "/blog/rcc2.jpg",
+    image: "/architect/blog/rcc2.jpg",
     content: "Detailed blog content for mistakes to avoid..."
   },
   {
@@ -24,7 +24,7 @@ const blogPosts = [
     title: "Future of Sustainable RCC Construction",
     date: "Dec 10, 2024",
     author: "Admin",
-    image: "/blog/rcc3.jpg",
+    image: "/architect/blog/rcc3.jpg",
     content: "Detailed blog content for sustainable construction..."
   }
 ];
